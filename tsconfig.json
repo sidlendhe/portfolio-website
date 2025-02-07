@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    // Target ECMAScript version
+    "target": "ES6",
+
+    // Library files to include
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // Allow JavaScript files to be compiled
+    "allowJs": true,
+
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+
+    // Enable ES module interop
+    "esModuleInterop": true,
+
+    // Enable all strict type-checking options
+    "strict": true,
+
+    // Force consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+
+    // Module code generation
+    "module": "ESNext",
+
+    // Module resolution strategy
+    "moduleResolution": "Node",
+
+    // Allow importing JSON files
+    "resolveJsonModule": true,
+
+    // Treat each file as a separate module
+    "isolatedModules": true,
+
+    // Do not emit JavaScript files (only type checking)
+    "noEmit": true,
+
+    // JSX transformation
+    "jsx": "react-jsx",
+
+    // Base directory for resolving non-relative module names
+    "baseUrl": ".",
+
+    // Path mappings for module aliases
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  // Include these files in the TypeScript project
+  "include": ["src"],
+
+  // Exclude these files from the TypeScript project
+  "exclude": ["node_modules", "dist", "build"]
+}
