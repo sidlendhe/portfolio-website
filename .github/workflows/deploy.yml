@@ -14,10 +14,10 @@ jobs:
       - name: Set up Docker Buildx (for multi-stage builds)
         uses: docker/setup-buildx-action@v2
 
-        - name: Clean npm cache and reinstall dependencies
-          run: |
-            rm -rf node_modules package-lock.json
-            npm install
+      - name: Clean npm cache and reinstall dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
 
       - name: Build with Docker
