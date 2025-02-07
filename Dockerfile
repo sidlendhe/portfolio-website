@@ -21,3 +21,7 @@ EXPOSE 5173
 
 # Start the application
 CMD ["npm", "run", "dev"]
+
+# Stage 2: Copy static files to a lightweight image (optional)
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
