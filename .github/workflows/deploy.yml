@@ -20,12 +20,8 @@ jobs:
         run: |
           rm -rf node_modules package-lock.json
 
-      - name: Build with Docker
-        run: |
-          docker build --no-cache -t portfolio .
-          docker create --name temp-container portfolio
-          docker cp temp-container:/usr/share/nginx/html ./build
-          docker rm -f temp-container
+      - name: Build the app
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
