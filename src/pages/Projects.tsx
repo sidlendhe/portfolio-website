@@ -1,49 +1,46 @@
 import React from 'react';
 
-interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  link: string;
-}
-
-const projects: Project[] = [
-  {
-    title: 'Automated Testing Framework',
-    description: 'A framework for automating UI tests using Selenium and Python.',
-    technologies: ['Selenium', 'Python', 'Pytest'],
-    link: 'https://github.com/yourusername/automated-testing-framework',
-  },
-  {
-    title: 'CI/CD Pipeline Setup',
-    description: 'Configured a CI/CD pipeline using Jenkins for automated deployments.',
-    technologies: ['Jenkins', 'Docker', 'Bash'],
-    link: 'https://github.com/yourusername/cicd-pipeline',
-  },
-];
-
 const Projects: React.FC = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold">Projects</h1>
-      <div className="mt-4 space-y-4">
-        {projects.map((project, index) => (
-          <div key={index} className="border p-4 rounded-lg">
-            <h2 className="text-2xl font-bold">{project.title}</h2>
-            <p className="mt-2">{project.description}</p>
-            <p className="mt-2">
-              <strong>Technologies:</strong> {project.technologies.join(', ')}
+    <div className="projects">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="projects">Key Projects</h1>
+        
+        <div className="projects-grid">
+          {/* Project 1 */}
+          <div className="project-card">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-600 p-3 rounded-lg mr-4">
+                🤖
+              </div>
+              <div>
+                <h3 className="projects">Test Automation Framework</h3>
+                <p className="text-gray-400">Selenium | Java | Cucumber</p>
+              </div>
+            </div>
+            <p className="text-gray-300">
+              Developed enterprise-level automation framework reducing regression testing time by 65%
             </p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              View on GitHub
-            </a>
           </div>
-        ))}
+
+          {/* Project 2 */}
+          <div className="project-card">
+            <div className="flex items-center mb-4">
+              <div className="bg-purple-600 p-3 rounded-lg mr-4">
+                🔄
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">CI/CD Pipeline</h3>
+                <p className="text-gray-400">Jenkins | Kubernetes | GCP</p>
+              </div>
+            </div>
+            <p className="text-gray-300">
+              Implemented containerized deployment pipeline improving release frequency by 40%
+            </p>
+          </div>
+
+          {/* Add more projects */}
+        </div>
       </div>
     </div>
   );
