@@ -7,13 +7,22 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Enable Docker BuildKit
+        run: |
+          export DOCKER_BUILDKIT=1
+
+      - name: Clean Dependencies (Fix Rollup Error)
+        run: |
+          rm -rf node_modules package-lock.json
+
       - name: Build with Docker
         run: |
-          docker build -t portfolio .
+          docker build --no-cache -t portfolio .
           docker create --name temp-container portfolio
           docker cp temp-container:/usr/share/nginx/html ./build
           docker rm -f temp-container
@@ -22,5 +31,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # This should match the Docker output directory
+          publish_dir: ./build
           force_orphan: true
