@@ -5,12 +5,12 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
 import Skills from './pages/Skills';
-import Navbar from './components/Navbar';
+import Breadcrumb from './components/Breadcrumb';
 
 const App = () => {
   return (
     <Router basename="/portfolio-website">
-      <Navbar />
+      <Breadcrumb />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Experience" element={<Experience />} />

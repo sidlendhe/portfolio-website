@@ -38,34 +38,6 @@ body {
   animation: slide-up 1s ease-out;
 }
 
-/* navbar Styles */
-.Navbar {
-  background-color: #1f2937;
-  padding: 1rem;
-}
-
-.navbar ol {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.navbar li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.navbar a {
-  color: #d1d5db;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #3b82f6;
-}
-
-
 /* Home Page */
 .home {
   min-height: 100vh;
@@ -114,11 +86,6 @@ body {
   font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
-}
-
-.experience .timeline {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .experience .job {
@@ -266,4 +233,31 @@ body {
 
 .contact-form button:hover {
   background-color: #2563eb;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #1f2937;
+  padding: 1rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb a {
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #3b82f6;
 }
