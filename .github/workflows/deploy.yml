@@ -20,6 +20,9 @@ jobs:
         run: |
           rm -rf node_modules package-lock.json
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build the app
         run: npm run build
 
