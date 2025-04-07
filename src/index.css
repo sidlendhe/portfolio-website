@@ -1,8 +1,193 @@
+/* General Styling */
+:root {
+  --pastel-background: #f0f8ff; /* AliceBlue */
+  --pastel-text: #2e4057; /* MidnightBlue */
+  --pastel-accent: #98d8aa; /* Pistachio */
+  --pastel-secondary: #f5cac9; /* CherryBlossomPink */
+  --pastel-tertiary: #a2d2ff; /* PowderBlue */
+}
+
+body {
+  background: var(--pastel-background);
+  color: var(--pastel-text);
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--pastel-text);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--pastel-accent);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--pastel-secondary);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Home Page */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.home h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: var(--pastel-text);
+  margin-bottom: 2em;
+  line-height: 1.6;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: var(--pastel-accent);
+  color: var(--pastel-text);
+  border-radius: 0.3em;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.home-link:hover {
+  background-color: var(--pastel-secondary);
+  transform: scale(1.1);
+}
+
+/* About Page */
+.about {
+  padding: 4rem 2rem;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Project Card */
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: var(--pastel-text);
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    color: var(--pastel-text);
+}
+
+.project-card a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background-color: var(--pastel-tertiary);
+    color: var(--pastel-text);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--pastel-secondary);
+}
+
+/* Header */
+.header {
+    background-color: var(--pastel-tertiary);
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--pastel-tertiary);
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--pastel-text);
+}
+
+/* Improved Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.animate-slide-right {
+    animation: slideInFromRight 1s ease-out;
+}
 /* Global Styles */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #1a1a1a, #111);
-  color: white;
+  background: linear-gradient(135deg, var(--pastel-background), #f0f8ff);
+  color: var(--pastel-text);
   margin: 0;
   padding: 0;
 }
@@ -40,7 +225,7 @@ body {
 
 /* navbar Styles */
 .navbar {
-  background-color: #1f2937;
+  background-color: var(--pastel-tertiary);
   padding: 1rem;
 }
 
@@ -57,12 +242,12 @@ body {
 }
 
 .navbar a {
-  color: #d1d5db;
+  color: var(--pastel-accent);
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #3b82f6;
+  color: var(--pastel-secondary);
 }
 
 
@@ -85,13 +270,13 @@ body {
 
 .home p {
   font-size: 1.25rem;
-  color: #d1d5db;
+  color: var(--pastel-text);
   margin-bottom: 2rem;
 }
 
 .home a {
-  background-color: #3b82f6;
-  color: white;
+  background-color: var(--pastel-accent);
+  color: var(--pastel-text);
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1.125rem;
@@ -100,7 +285,7 @@ body {
 }
 
 .home a:hover {
-  background-color: #2563eb;
+  background-color: var(--pastel-secondary);
   transform: scale(1.05);
 }
 
@@ -122,11 +307,11 @@ body {
 }
 
 .experience .job {
-  background-color: #1f2937;
+  background-color: var(--pastel-tertiary);
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--pastel-accent);
 }
 
 .experience .job h2 {
@@ -136,14 +321,14 @@ body {
 }
 
 .experience .job p {
-  color: #9ca3af;
+  color: var(--pastel-text);
   margin-bottom: 1rem;
 }
 
 .experience .job ul {
   list-style-type: disc;
   padding-left: 1.5rem;
-  color: #d1d5db;
+  color: var(--pastel-text);
 }
 
 /* Skills Page */
@@ -165,7 +350,7 @@ body {
 }
 
 .skill-card {
-  background-color: #1f2937;
+  background-color: var(--pastel-tertiary);
   padding: 1.5rem;
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
@@ -182,7 +367,7 @@ body {
 }
 
 .skill-card p {
-  color: #d1d5db;
+  color: var(--pastel-text);
 }
 
 /* Projects Page */
@@ -204,7 +389,7 @@ body {
 }
 
 .project-card {
-  background-color: #1f2937;
+  background-color: var(--pastel-tertiary);
   padding: 1.5rem;
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
@@ -221,7 +406,7 @@ body {
 }
 
 .project-card p {
-  color: #d1d5db;
+  color: var(--pastel-text);
 }
 
 /* Contact Page */
@@ -237,7 +422,7 @@ body {
 }
 
 .contact-form {
-  background-color: #1f2937;
+  background-color: var(--pastel-tertiary);
   padding: 2rem;
   border-radius: 8px;
 }
@@ -254,8 +439,8 @@ body {
 }
 
 .contact-form button {
-  background-color: #3b82f6;
-  color: white;
+  background-color: var(--pastel-accent);
+  color: var(--pastel-text);
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
@@ -265,5 +450,5 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #2563eb;
+  background-color: var(--pastel-secondary);
 }
